@@ -1,0 +1,16 @@
+﻿import { svelte } from '@sveltejs/vite-plugin-svelte'
+import { defineConfig } from 'vite'
+
+// https://vite.dev/config/
+export default defineConfig({
+  plugins: [svelte()],
+  server: {
+    host: '0.0.0.0',
+    port: 5173,
+    strictPort: true,
+    open: true,
+    watch: {
+      ignored: ['**/nexa-backend/**', '**/.git/**']
+    }
+  }
+})
